@@ -72,3 +72,21 @@ function flickerLight() {
 window.onload = flickerLight;
 
 
+/* Footer Name Color Change */
+  document.getElementById("footerName").addEventListener("click", function () {
+    const colors = [
+      "text-red-500", "text-blue-500", "text-green-800", "text-yellow-800", "text-purple-500",
+      "text-rose-600", "text-emerald-700", "text-indigo-400", "text-orange-600", "text-cyan-700",
+      "text-pink-600", "text-teal-600", "text-lime-700", "text-fuchsia-600", "text-violet-700",
+      "text-sky-500", "text-amber-500", "text-gray-700", "text-stone-500", "text-neutral-700"
+    ];
+    
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+    // Remove previous color classes
+    this.classList.remove(...colors);
+
+    // Add new random color
+    this.classList.add(randomColor);
+  });
+
