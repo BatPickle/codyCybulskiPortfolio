@@ -56,7 +56,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 40; /* Ensures it's above everything */
+    z-index: 9999; /* Ensures it's above everything */
 }
 
 .hidden {
