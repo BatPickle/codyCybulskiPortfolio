@@ -190,3 +190,33 @@ document.querySelector(".swiper-button-next").addEventListener("click", function
 document.querySelector(".swiper-button-prev").addEventListener("click", function () {
   if (!isTransitioning) swiper.slidePrev();
 });
+
+
+
+
+/* keys to navigate */
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") { // Change this to your preferred key
+      let activeSlide = document.querySelector(".swiper-slide-active"); // Get active slide
+      let modalId = activeSlide.querySelector("button").dataset.modal; // Retrieve modal ID
+      let modal = document.getElementById(modalId); // Find modal element
+
+      if (modal) {
+          modal.classList.remove("hidden"); // Open modal
+      }
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") { 
+      document.querySelectorAll(".modal").forEach(modal => modal.classList.add("hidden"));
+  }
+});
+
+
+
+/* Download button */
+document.getElementById("downloadBtn").addEventListener("click", function() {
+  this.classList.remove("border-red-500", "shadow-red-500/50", "hover:border-red-600", "hover:shadow-red-600/70"); // Remove red styles
+  this.classList.add("border-green-500", "shadow-green-500/50"); // Apply green styles
+});

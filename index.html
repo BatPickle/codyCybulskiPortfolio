@@ -13,10 +13,10 @@
 
 <body class="overflow-hidden">
 
-    <header class="bg-gray-800 text-white relative flex flex-col mb-3">
+    <header class="relative flex flex-col mb-3">
         <!--vertical rectangles -->
         <div>
-            <div class="absolute top-0 left-0 w-full flex justify-evenly bg-neutral-400 h-26 rounded-b-xl">
+            <div class="absolute top-0 left-0 w-full flex justify-evenly bg-gradient-to-t from-neutral-300 to-neutral-500 h-26 rounded-b-xl">
                 <!-- Left line -->
                 <div class="absolute left-14 h-full w-[.2rem] bg-neutral-500"></div>
 
@@ -113,19 +113,19 @@
                             </button>
                         </div>
 
-                        <!-- Card 2 - With Modal -->
+                        <!-- Card 4 - With Modal -->
                         <div class="swiper-slide">
-                            <button class="open-modal" data-modal="modal-collection">
+                            <button class="open-modal" data-modal="modal-download">
                                 <div
                                     class="relative w-64 h-82 bg-neutral-800 rounded-3xl shadow-lg p-4 border-4 border-neutral-400">
-                                    <h3 class="text-center text-red-500 text-5xl mb-2">Collection</h3>
-                                    <img src="img/arcade_machine.png" alt="Image 2" class="w-full h-48 object-cover">
+                                    <h3 class="text-center text-red-500 text-5xl mb-2">Data</h3>
+                                    <img src="img/documentNeon.png" alt="Image 2" class="w-full h-48 object-cover">
 
                                     <!-- Gallery & Year Section -->
                                     <div
                                         class="text-center text-justify text-xl text-red-500 text-sm mt-2 relative flex items-center justify-between rounded-xl bg-stone-950 h-10 px-4">
-                                        <p>Gallery</p>
-                                        <p class="text-white rounded-xl bg-neutral-500 text-center w-25">2025</p>
+                                        <p>Resume</p>
+                                        <p class="text-white rounded-xl bg-neutral-500 text-center w-25">1971</p>
                                     </div>
                                 </div>
                             </button>
@@ -267,6 +267,28 @@
     </div>
 
 
+    <!-- card 4 PDF Modal -->
+<div id="modal-download"
+class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center p-4">
+<div class="bg-neutral-900 text-white p-6 rounded-lg relative w-full max-w-md shadow-lg shadow-red-400/50 border-4 border-gray-600">
+    
+    <!-- Close Button -->
+    <button class="close-modal absolute top-2 right-2 text-red-600 text-3xl cursor-pointer">✖</button>
+    
+    <!-- Title -->
+    <h2 class="text-3xl sm:text-4xl mb-4 text-center">Download Resume?</h2>
+    <div class="w-full h-[2px] bg-gray-500 mb-4"></div>
+
+    <!-- Download Button -->
+    <div class="flex justify-center">
+        <button id="downloadBtn"
+            class="border-4 border-red-500 text-white text-xl font-bold py-3 px-6 rounded-xl bg-transparent shadow-lg shadow-red-500/50 transition duration-300 hover:shadow-red-600/70 hover:border-red-600">
+            Download PDF
+        </button>
+    </div>
+</div>
+</div>
+
 
 
     <!-- Card 5 Modal - PING -->
@@ -300,24 +322,32 @@
     </div>
 
 
-    <!-- Bottom Bar -->
-    <footer
-        class="bg-neutral-400 w-full py-4 fixed bottom-0 left-0 flex flex-wrap justify-between items-center px-4 md:px-10 rounded-t-xl">
-        <div class="flex items-center">
-            <!-- Adjusted image size -->
-            <img src="img/snesLogo.png" class="h-16 md:h-20 lg:h-28 w-16 md:w-20 lg:w-28 rounded-full">
 
-            <!-- Adjusted name size -->
-            <div id="footerName" class="ml-2 text-3xl md:text-5xl text-red-500 italic cursor-pointer duration-300">
-                Cody Cybulski
-            </div>
-        </div>
+<!-- Footer -->
+<footer class="bg-gradient-to-t from-neutral-500 to-neutral-300 w-full py-4 fixed bottom-0 left-0 flex flex-wrap justify-between items-center px-4 md:px-10 rounded-t-xl border-t-2 border-neutral-500 shadow-md shadow-red-400/50">
+    
+    <div class="flex items-center">
+        <!-- Left Side Image -->
+        <img src="img/snesLogo.png" class="h-16 md:h-20 lg:h-28 w-16 md:w-20 lg:w-35 rounded-full ml-10">
 
-        <!-- Added spacing for power light -->
-        <div class="power-light-wrapper mr-6 sm:mr-8 md:mr-10">
-            <div class="power-light"></div>
+        <!-- Name -->
+        <div id="footerName" class="ml-2 text-3xl md:text-5xl text-red-500 italic cursor-pointer duration-300">
+            Cody Cybulski
         </div>
-    </footer>
+    </div>
+    <!-- Vertical Line on Left (Indented Inward) -->
+    <div class="absolute left-14 h-full w-[.2rem] bg-neutral-500"></div>
+
+    <!-- Vertical Line on Right (Indented Inward) -->
+    <div class="absolute right-14 h-full w-[.2rem] bg-neutral-500"></div>
+
+    <!-- Power Light (Flicker Animation) -->
+    <div class="power-light-wrapper mr-6 sm:mr-8 md:mr-10">
+        <div class="power-light animate-pulse"></div>
+    </div>
+</footer>
+
+
 
     <script src="script.js"></script>
 </body>
