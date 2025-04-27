@@ -40,7 +40,7 @@ var swiper = new Swiper(".my-3d-carousel", {
     },
     480: {
         slidesPerView: 2,
-        spaceBetween: 100,
+        spaceBetween: 150,
     },
     0: { // Default for all smaller screens
         slidesPerView: 2,

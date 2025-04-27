@@ -31,7 +31,7 @@ body {
 
 /* power light */
 .power-light-wrapper {
-    width: 100px;
+    width: 6vw;
     height: 20px;
     background-color: transparent;
     border: 3px solid rgb(100, 100, 100); /* Solid border */
