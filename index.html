@@ -149,7 +149,8 @@
                             </button>
                         </div>
 
-<!-- end cards -->
+                        <!-- Add more cards as needed -->
+
                     </div>
 
                     <div class="swiper-pagination"></div>
@@ -300,30 +301,23 @@
 
 
     <!-- Bottom Bar -->
-    <footer <footer
-        class="bg-neutral-400 text-white py-4 text-center w-full h-[100px] fixed bottom-0 left-0 flex items-center justify-between px-10 rounded-t-xl z-50">
-
-        <!-- Left Side: Image & Name -->
+    <footer
+        class="bg-neutral-400 w-full py-4 fixed bottom-0 left-0 flex flex-wrap justify-between items-center px-4 md:px-10 rounded-t-xl">
         <div class="flex items-center">
-            <img src="img/snesLogo.png" alt="Profile Image" class="h-[5vw] w-[6vw] rounded-full ml-10">
-            <div id="footerName" class="ml-3 text-[4.5vw] text-red-500 italic cursor-pointer duration-300 max-w-[640px]:text-2xl">
-                Cody
-                Cybulski</div>
+            <!-- Adjusted image size -->
+            <img src="img/snesLogo.png" class="h-16 md:h-20 lg:h-28 w-16 md:w-20 lg:w-28 rounded-full">
+
+            <!-- Adjusted name size -->
+            <div id="footerName" class="ml-2 text-3xl md:text-5xl text-red-500 italic cursor-pointer duration-300">
+                Cody Cybulski
+            </div>
         </div>
 
-        <!-- Vertical Line on Left (Indented Inward) -->
-        <div class="absolute left-14 h-full w-[.2rem] bg-neutral-500"></div>
-
-        <!-- Vertical Line on Right (Indented Inward) -->
-        <div class="absolute right-14 h-full w-[.2rem] bg-neutral-500"></div>
-
-        <!-- Right Side: Power Light -->
-        <div class="power-light-wrapper mr-10">
+        <!-- Added spacing for power light -->
+        <div class="power-light-wrapper mr-6 sm:mr-8 md:mr-10">
             <div class="power-light"></div>
         </div>
     </footer>
-
-
 
     <script src="script.js"></script>
 </body>
