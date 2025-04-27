@@ -220,3 +220,38 @@ document.getElementById("downloadBtn").addEventListener("click", function() {
   this.classList.remove("border-red-500", "shadow-red-500/50", "hover:border-red-600", "hover:shadow-red-600/70"); // Remove red styles
   this.classList.add("border-green-500", "shadow-green-500/50"); // Apply green styles
 });
+
+
+
+
+/* konami code */
+let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+let userInput = [];
+let heartsContainer = document.createElement('div'); // Create the heart container
+heartsContainer.className = "hearts-overlay hidden"; // Initially hidden
+document.body.appendChild(heartsContainer);
+
+document.addEventListener("keydown", (event) => {
+    userInput.push(event.key);
+    
+    // Check if input matches Konami Code
+    if (userInput.join("").includes(konamiCode.join(""))) {
+        showHearts();
+        userInput = []; // Reset input
+    }
+});
+
+function showHearts() {
+    heartsContainer.innerHTML = ''; // Clear previous hearts
+    heartsContainer.classList.remove("hidden");
+
+    for (let i = 0; i < 3; i++) {
+        let heart = document.createElement("div");
+        heart.className = "heart";
+        heartsContainer.appendChild(heart);
+    }
+
+    setTimeout(() => {
+        heartsContainer.classList.add("hidden");
+    }, 1000); // Hearts disappear after 1 second
+}
