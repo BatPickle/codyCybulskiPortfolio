@@ -1,13 +1,15 @@
 
 /* SWIPER FUNCTIONALITY */
 var swiper = new Swiper(".my-3d-carousel", {
-  direction: "horizontal",
   loop: true,
+  keyboard: true,
+  mousewheel: true,
   centeredSlides: true,
-  spaceBetween: 30,
+  slidesPerView: "auto", // Auto-adjusts based on width
+  spaceBetween: 250,
   slideToClickedSlide: true,
-  slidesPerView: 3,
   effect: "coverflow",
+  speed: 600,
   coverflowEffect: {
     rotate: 30,
     stretch: 50,
@@ -19,15 +21,97 @@ var swiper = new Swiper(".my-3d-carousel", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  on: {
-    init: function () {
-      updateSlideOpacity(); // Ensure opacity is set correctly at first load
+  breakpoints: {
+    2000: {
+      slidesPerView: 3,
+      spaceBetween: 650,
+  },
+    1600: {
+        slidesPerView: 3,
+        spaceBetween: 550,
     },
-    slideChangeTransitionEnd: function () {
-      updateSlideOpacity(); // Update opacity correctly after every transition
+    1150: {
+      slidesPerView: 3,
+      spaceBetween: 250,
+  },
+    768: {
+        slidesPerView: 3,
+        spaceBetween: 150,
+    },
+    480: {
+        slidesPerView: 2,
+        spaceBetween: 100,
+    },
+    0: { // Default for all smaller screens
+        slidesPerView: 2,
+        spaceBetween: 50,
     }
-  }
+}
+
 });
+
+window.addEventListener("resize", function () {
+  swiper.update(); // Recalculates layout for smoother transitions
+});
+
+
+
+
+// Ensure clicking a slide DOES NOT move the carousel
+document.querySelectorAll(".swiper-slide").forEach(slide => {
+  slide.removeEventListener("click", function () {
+    const clickedIndex = swiper.slides.indexOf(this);
+    swiper.slideTo(clickedIndex);
+  });
+});
+
+// Ensure modal ONLY opens when clicking a centered slide
+document.querySelectorAll(".swiper-slide").forEach(slide => {
+  slide.addEventListener("click", function () {
+    // Check if the slide is centered within the viewport
+    const rect = slide.getBoundingClientRect();
+    const screenWidth = window.innerWidth;
+    const isCentered = rect.left >= screenWidth * 0.3 && rect.right <= screenWidth * 0.7;
+
+    if (slide.classList.contains("swiper-slide-active") && isCentered) {
+      const modalButton = slide.querySelector(".open-modal");
+      if (modalButton) {
+        const modalId = modalButton.dataset.modal;
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.remove("hidden");
+        }
+      }
+    }
+  });
+});
+
+
+
+
+
+// Close modal when clicking the close button
+document.querySelectorAll(".close-modal").forEach(button => {
+  button.addEventListener("click", function () {
+    const modal = this.closest(".modal");
+
+    if (modal) {
+      modal.classList.add("hidden"); // Hide the modal
+    }
+  });
+});
+
+// Close modal when clicking outside the modal content
+document.querySelectorAll(".modal").forEach(modal => {
+  modal.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.classList.add("hidden");
+      modal.style.display = "none";
+    }
+  });
+});
+
+
 
 
 /* SLIDE OPACITY */
@@ -91,34 +175,18 @@ document.getElementById("footerName").addEventListener("click", function () {
 });
 
 
-// Open modal when clicking a card
-document.querySelectorAll(".open-modal").forEach(button => {
-  button.addEventListener("click", function () {
-      const modalId = this.dataset.modal;
-      const modal = document.getElementById(modalId);
 
-      if (modal && modal.classList.contains("hidden")) {
-          modal.classList.remove("hidden"); // Show the modal
-      }
-  });
+let isTransitioning = false;
+swiper.on("slideChangeTransitionStart", () => {
+  isTransitioning = true;
+});
+swiper.on("slideChangeTransitionEnd", () => {
+  isTransitioning = false;
 });
 
-// Close modal when clicking the close button
-document.querySelectorAll(".close-modal").forEach(button => {
-  button.addEventListener("click", function () {
-      const modal = this.closest(".modal");
-
-      if (modal) {
-          modal.classList.add("hidden"); // Hide the modal
-      }
-  });
+document.querySelector(".swiper-button-next").addEventListener("click", function () {
+  if (!isTransitioning) swiper.slideNext();
 });
-
-// Close modal when clicking outside the modal content
-document.querySelectorAll(".modal").forEach(modal => {
-  modal.addEventListener("click", function (event) {
-      if (event.target === modal) {
-          modal.classList.add("hidden");
-      }
-  });
+document.querySelector(".swiper-button-prev").addEventListener("click", function () {
+  if (!isTransitioning) swiper.slidePrev();
 });
