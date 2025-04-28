@@ -16,7 +16,8 @@
     <header class="relative flex flex-col mb-3">
         <!--vertical rectangles -->
         <div>
-            <div class="absolute top-0 left-0 w-full flex justify-evenly bg-gradient-to-t from-neutral-300 to-neutral-500 h-26 rounded-b-xl">
+            <div
+                class="absolute top-0 left-0 w-full flex justify-evenly bg-gradient-to-t from-neutral-300 to-neutral-500 h-26 rounded-b-xl">
                 <!-- Left line -->
                 <div class="absolute left-14 h-full w-[.2rem] bg-neutral-500"></div>
 
@@ -173,14 +174,36 @@
 
             <!-- Content -->
             <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600 mb-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quae magnam error sunt, corporis, eius
-                    placeat tenetur mollitia ratione quo qui sequi quia facilis dolor fugit eum dignissimos, non
-                    consequuntur obcaecati. Voluptate consequatur modi aliquam aperiam atque! Provident ad nisi fuga
-                    quo. Quae similique ex aliquam numquam expedita consectetur tenetur? Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. Adipisci cum quo reprehenderit distinctio ex labore architecto
-                    quibusdam cupiditate consequuntur temporibus quos, nulla harum voluptatibus qui quisquam quam
-                    aperiam iure cumque? Iure, aut! Magni rem impedit odio, voluptates pariatur quisquam perferendis!
-                    Velit quidem dolores incidunt debitis aliquam aliquid odit? Sapiente, repudiandae.</p>
+                <p>Hello! My name is Cody Cybulski and I am an aspiring full stack web developer.
+                </p>
+                <br>
+                <p>
+                    I am proficient in core front-end technologies—HTML, CSS, and JavaScript. I have experience with using
+                    Bootstrap and Tailwind frameworks, and I am currently expanding my
+                    skills in WordPress and MySQL. Seeing my work come together as a functional and engaging experience for users
+                    is what drives my enthusiasm for web development. I am committed to learning and improving at every
+                    opportunity, ensuring that I bring creativity and technical proficiency to each project.
+                </p>
+                <br>
+                <p>
+                    Outside of coding, I live a busy and fulfilling life. I’m 26 years old and very happily married, and we
+                    take great joy in spoiling our cute dog - Luma. My wife and I are fully remodeling our 1920s
+                    home, which has been a huge amount of work, but we’ve had a blast seeing it come together.
+                </p>
+                <br>
+                <p>
+                    I play some video games; I like the classics (if you can’t tell). I run a small business in 3D
+                    printing and laser cutting. And I am really trying my absolute best to learn more web dev content at
+                    every chance I get.
+                </p>
+                <br>
+                <p>
+                    I hope you enjoy this little tribute to classic games that I have come up with. I’ve had tons of fun
+                    creating this and I pushed myself to make this another learning experience. That being said, there
+                    are a decent amount of hidden little secrets and easter eggs tossed around in this site. Feel free
+                    to peruse as much as you want, this site was created with the Tailwind framework and
+                    I made this an interactive, JavaScript-heavy site. With that, Thank you for visiting!
+                </p>
             </div>
 
         </div>
@@ -204,10 +227,10 @@
                 <!-- Project 1 -->
                 <div
                     class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600 hover:border-red-500 transition duration-300">
-                    <a href="Filler"><img src="img/examplePhoto.png" alt="Project 1"
+                    <a href="https://codycybulski.github.io/GalleryOne/" target="_blank"><img src="img/exampleOneSite.png" alt="Project 1"
                             class="w-full h-40 object-cover rounded-md mb-2"></a>
-                    <h3 class="text-xl mb-1">Project 1</h3>
-                    <p class="text-sm text-gray-400">A brief description of Project 1.</p>
+                    <h3 class="text-xl mb-1">Bootstrap Example</h3>
+                    <p class="text-sm text-gray-400">Built with Bootstrap framework</p>
                 </div>
 
                 <!-- Project 2 -->
@@ -232,62 +255,94 @@
     </div>
 
 
-    <!-- Card 3 modal - FAQ -->
+    <!-- Card 3 modal - Cody's Corner -->
 
     <div id="modal-faq" class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center">
-        <div class="bg-neutral-900 text-white p-6 rounded-lg relative w-96">
+        <div class="bg-neutral-900 text-white p-6 rounded-lg relative w-[90vw] max-w-5xl">
             <!-- Close Button -->
             <button class="close-modal absolute top-2 right-2 text-red-600 text-3xl cursor-pointer glow-red">✖</button>
-
+    
             <!-- Title Section -->
-            <h2 class="text-4xl mb-2 text-center">Fun Facts</h2>
+            <h2 class="text-4xl mb-4 text-center">Cody's Corner</h2>
             <div class="w-full h-[2px] bg-gray-500 mb-4"></div>
-
-            <!-- Section 1 -->
-            <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600 mb-4">
-                <h3 class="text-2xl mb-2">Question One</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, iure quos amet modi nemo
-                    voluptas.</p>
-            </div>
-
-            <!-- Section 2 -->
-            <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600 mb-4">
-                <h3 class="text-2xl mb-2">Question Two</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, iure quos amet modi nemo
-                    voluptas.</p>
-            </div>
-
-            <!-- Section 3 -->
-            <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600">
-                <h3 class="text-2xl mb-2">Question Three</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, iure quos amet modi nemo
-                    voluptas.</p>
+    
+            <!-- Grid Layout for Boxes -->
+            <div class="grid grid-cols-4 gap-4">
+                <!-- Section 1 -->
+                <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600">
+                    <h3 class="text-2xl mb-2 border-b-2 border-gray-600">What is your favorite color?</h3>
+                    <p class="text-green-500 text-2xl">Green!</p>
+                </div>
+    
+                <!-- Section 2 -->
+                <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600">
+                    <h3 class="text-2xl mb-2 border-b-2 border-gray-600">What is your dream car?</h3>
+                    <p>2010 Chevy Camaro - <span class="text-yellow-500">yellow</span> <span class="text-yellow-500 border-l-5 border-r-5 border-black">with black</span> <span class="text-yellow-500">stripes</span></p>
+                </div>
+    
+                <!-- Section 3 -->
+                <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600">
+                    <h3 class="text-2xl mb-2 border-b-2 border-gray-600">Favorite type of music?</h3>
+                    <p class="text-xl">Classic Rock🎸</p>
+                </div>
+    
+                <!-- Section 4 -->
+                <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600">
+                    <h3 class="text-2xl mb-2 border-b-2 border-gray-600">Favorite type of ice cream?</h3>
+                    <p class="text-xl">Anything with chocolate in it</p>
+                </div>
+    
+                <!-- Section 5 -->
+                <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600">
+                    <h3 class="text-2xl mb-2 border-b-2 border-gray-600">Do you have any siblings?</h3>
+                    <p class="text-xl">I have three sisters</p>
+                </div>
+    
+                <!-- Section 6 -->
+                <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600">
+                    <h3 class="text-2xl mb-2 border-b-2 border-gray-600">Favorite hobby?</h3>
+                    <p class="text-xl">3D printing</p>
+                </div>
+    
+                <!-- Section 7 -->
+                <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600">
+                    <h3 class="text-2xl mb-2 border-b-2 border-gray-600">What emoji do you use most often?</h3>
+                    <p class="text-xl"><span class="text-2xl">😂</span>this guy right here</p>
+                </div>
+    
+                <!-- Section 8 -->
+                <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600">
+                    <h3 class="text-2xl mb-2 border-b-2 border-gray-600">bleh bleh bleh</h3>
+                    <p>blah blah blah</p>
+                </div>
             </div>
         </div>
     </div>
+    
 
 
     <!-- card 4 PDF Modal -->
-<div id="modal-download"
-class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center p-4">
-<div class="bg-neutral-900 text-white p-6 rounded-lg relative w-full max-w-md shadow-lg shadow-red-400/50 border-4 border-gray-600">
-    
-    <!-- Close Button -->
-    <button class="close-modal absolute top-2 right-2 text-red-600 text-3xl cursor-pointer">✖</button>
-    
-    <!-- Title -->
-    <h2 class="text-3xl sm:text-4xl mb-4 text-center">Download Resume?</h2>
-    <div class="w-full h-[2px] bg-gray-500 mb-4"></div>
+    <div id="modal-download"
+        class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center p-4">
+        <div
+            class="bg-neutral-900 text-white p-6 rounded-lg relative w-full max-w-md shadow-lg shadow-red-400/50 border-4 border-gray-600">
 
-    <!-- Download Button -->
-    <div class="flex justify-center">
-        <button id="downloadBtn"
-            class="border-4 border-red-500 text-white text-xl font-bold py-3 px-6 rounded-xl bg-transparent shadow-lg shadow-red-500/50 transition duration-300 hover:shadow-red-600/70 hover:border-red-600">
-            Download PDF
-        </button>
+            <!-- Close Button -->
+            <button class="close-modal absolute top-2 right-2 text-red-600 text-3xl cursor-pointer">✖</button>
+
+            <!-- Title -->
+            <h2 class="text-3xl sm:text-4xl mb-4 text-center">View Resume?</h2>
+            <div class="w-full h-[2px] bg-gray-500 mb-4"></div>
+
+            <!-- Download Button -->
+            <div class="flex justify-center">
+                <a href="img/Cody Cybulski.pdf" target="_blank" <button id="downloadBtn"
+                    class="border-4 border-red-500 text-white text-xl font-bold py-3 px-6 rounded-xl bg-transparent shadow-lg shadow-red-500/50 transition duration-300 hover:shadow-red-600/70 hover:border-red-600">
+                    View PDF
+                </button></a>
+            </div>
+        </div>
     </div>
-</div>
-</div>
 
 
 
@@ -304,48 +359,50 @@ class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center ite
             <!-- Section 1 -->
             <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600 mb-4">
                 <h3 class="text-2xl mb-2">Email:</h3>
-                <p>codycybulski@gmail.com</p>
+                <a href="#" id="copyEmail" class="text-xl text-blue-500 hover:underline">codycybulski@gmail.com</a>
+
             </div>
 
             <!-- Section 2 -->
-            <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600 mb-4">
-                <h3 class="text-2xl mb-2">LinkedIn:</h3>
-                <p>Details Here</p>
+            <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600">
+                <h3 class="text-2xl mb-2">GitHub:</h3>
+                <a href="https://github.com/CodyCybulski" target="_blank" class="text-xl text-blue-500 hover:underline"><p>https://github.com/CodyCybulski</p></a>
             </div>
 
             <!-- Section 3 -->
-            <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600">
-                <h3 class="text-2xl mb-2">GitHub:</h3>
-                <p>https://github.com/CodyCybulski</p>
+            <div class="bg-neutral-800 p-4 rounded-lg border-4 border-gray-600 mb-4">
+                <h3 class="text-2xl mb-2">LinkedIn:</h3>
+                <p>Coming Soon</p>
             </div>
         </div>
     </div>
 
 
 
-<!-- Footer -->
-<footer class="bg-gradient-to-t from-neutral-500 to-neutral-300 w-full py-4 fixed bottom-0 left-0 flex flex-wrap justify-between items-center px-4 md:px-10 sm:px-10 rounded-t-xl border-t-2 border-neutral-500 shadow-md shadow-red-400/50">
-    
-    <div class="flex items-center">
-        <!-- Left Side Image -->
-        <img src="img/snesLogo.png" class="h-16 md:h-20 lg:h-28 w-16 md:w-20 lg:w-35 rounded-full ml-10">
+    <!-- Footer -->
+    <footer
+        class="bg-gradient-to-t from-neutral-500 to-neutral-300 w-full py-4 fixed bottom-0 left-0 flex flex-wrap justify-between items-center px-4 md:px-10 sm:px-10 rounded-t-xl border-t-2 border-neutral-500 shadow-md shadow-red-400/50">
 
-        <!-- Name -->
-        <div id="footerName" class="ml-2 text-3xl md:text-5xl text-red-500 italic cursor-pointer duration-300">
-            Cody Cybulski
+        <div class="flex items-center">
+            <!-- Left Side Image -->
+            <img src="img/snesLogo.png" class="h-16 md:h-20 lg:h-28 w-16 md:w-20 lg:w-35 rounded-full ml-10">
+
+            <!-- Name -->
+            <div id="footerName" class="ml-2 text-3xl md:text-5xl text-red-500 italic cursor-pointer duration-300">
+                Cody Cybulski
+            </div>
         </div>
-    </div>
-    <!-- Vertical Line on Left (Indented Inward) -->
-    <div class="absolute left-14 h-full w-[.2rem] bg-neutral-500"></div>
+        <!-- Vertical Line on Left (Indented Inward) -->
+        <div class="absolute left-14 h-full w-[.2rem] bg-neutral-500"></div>
 
-    <!-- Vertical Line on Right (Indented Inward) -->
-    <div class="absolute right-14 h-full w-[.2rem] bg-neutral-500"></div>
+        <!-- Vertical Line on Right (Indented Inward) -->
+        <div class="absolute right-14 h-full w-[.2rem] bg-neutral-500"></div>
 
-    <!-- Power Light (Flicker Animation) -->
-    <div class="power-light-wrapper mr-6 sm:mr-8 md:mr-10">
-        <div class="power-light animate-pulse"></div>
-    </div>
-</footer>
+        <!-- Power Light (Flicker Animation) -->
+        <div class="power-light-wrapper mr-6 sm:mr-8 md:mr-10">
+            <div class="power-light animate-pulse"></div>
+        </div>
+    </footer>
 
 
 

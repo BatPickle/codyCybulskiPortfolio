@@ -7,7 +7,7 @@ var swiper = new Swiper(".my-3d-carousel", {
   centeredSlides: true,
   slidesPerView: "auto", // Auto-adjusts based on width
   spaceBetween: 250,
-  slideToClickedSlide: true,
+  slideToClickedSlide: false,
   effect: "coverflow",
   speed: 600,
   coverflowEffect: {
@@ -96,7 +96,19 @@ document.querySelectorAll(".close-modal").forEach(button => {
     const modal = this.closest(".modal");
 
     if (modal) {
-      modal.classList.add("hidden"); // Hide the modal
+      modal.classList.add("hidden");
+      modal.style.display = "none";
+    }
+  });
+});
+
+document.querySelectorAll(".open-modal").forEach(button => {
+  button.addEventListener("click", function () {
+    const modalId = this.dataset.modal;
+    const modal = document.getElementById(modalId);
+
+    if (modal) {
+      modal.style.display = "flex";
     }
   });
 });
@@ -255,3 +267,16 @@ function showHearts() {
         heartsContainer.classList.add("hidden");
     }, 1000); // Hearts disappear after 1 second
 }
+
+
+/* Copy Email */
+document.getElementById("copyEmail").addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent the link from navigating
+  const email = "codycybulski@gmail.com"; // Replace with your actual email
+
+  navigator.clipboard.writeText(email).then(() => {
+      alert("Email copied to clipboard!"); // Optional: Notify user
+  }).catch(err => {
+      console.error("Failed to copy: ", err);
+  });
+});

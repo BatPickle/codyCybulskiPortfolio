@@ -107,8 +107,8 @@ body {
 /* Swiper arrow buttons */
 .swiper-button-next,
 .swiper-button-prev {
-    color: #fff;
-    background-color: #00000080;
+    color: #58e6ff;
+    background-color: #000000df;
     padding: 30px;
     border-radius: 50%;
     transition: all 0.3s ease;
@@ -116,7 +116,8 @@ body {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background-color: #000000cc;
+    background-color: #000000f3;
+    color: #58e6ff;
 }
 
 .swiper-button-next::after,
