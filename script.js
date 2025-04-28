@@ -7,7 +7,7 @@ var swiper = new Swiper(".my-3d-carousel", {
   centeredSlides: true,
   slidesPerView: "auto", // Auto-adjusts based on width
   spaceBetween: 250,
-  slideToClickedSlide: false,
+  slideToClickedSlide: true,
   effect: "coverflow",
   speed: 600,
   coverflowEffect: {
@@ -47,23 +47,9 @@ var swiper = new Swiper(".my-3d-carousel", {
         spaceBetween: 50,
     }
 }
-
-});
-
-window.addEventListener("resize", function () {
-  swiper.update(); // Recalculates layout for smoother transitions
 });
 
 
-
-
-// Ensure clicking a slide DOES NOT move the carousel
-document.querySelectorAll(".swiper-slide").forEach(slide => {
-  slide.removeEventListener("click", function () {
-    const clickedIndex = swiper.slides.indexOf(this);
-    swiper.slideTo(clickedIndex);
-  });
-});
 
 // Ensure modal ONLY opens when clicking a centered slide
 document.querySelectorAll(".swiper-slide").forEach(slide => {
